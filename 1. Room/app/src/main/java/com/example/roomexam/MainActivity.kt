@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         
         //todo 추가하고 보여주기
         btn_todo.setOnClickListener {
-            db.todoDao().insert(Todo(edit_todo.text.toString(), 1))
+            db.todoDao().insert(Todo(edit_todo.text.toString()))
             txt_result.text = db.todoDao().getAll().toString()
         }
     }

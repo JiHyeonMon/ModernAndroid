@@ -4,10 +4,12 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity()
 data class Todo (
-    @ColumnInfo val title: String?,
-    @PrimaryKey(autoGenerate = true) val id: Int  //기본키 자동으로 생성되게
-)
+    @ColumnInfo var title: String?
+    //id 자동 생성--> 생성자에서 밑으로 따로 빼준다.
+){
+    @PrimaryKey(autoGenerate = true) var id : Int = 0 //초기값 0
+}
 
 //sql database기반이기 때문에 id가 primary key여야 함. Room 사용
