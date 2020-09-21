@@ -49,5 +49,9 @@ dependencies {
     // kotlin room 비동기 처리 위한 코루틴 사용 - 그 중 lifecyclescope 사용
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-alpha07"
 
+    def lifecycle_version = "2.2.0"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
 }
